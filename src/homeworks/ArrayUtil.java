@@ -46,7 +46,7 @@ public class ArrayUtil {
         } else if (numbers.length % 2 != 0) {
             System.out.println("Middle element: " + numbers[numbers.length / 2]);
         } else if (numbers.length % 2 == 0) {
-            System.out.println("Middle elements: " + numbers[numbers.length / 2] + numbers[numbers.length / 2 - 1]);
+            System.out.println("Middle elements: " + numbers[numbers.length / 2] + " "  + numbers[numbers.length / 2 - 1]);
         }
 
         //  Խնդիր 7 — Հաշվել զույգ թվերի քանակը
@@ -87,12 +87,10 @@ public class ArrayUtil {
             sum1 =  sum1 + numbers[i];
         }
 
-         for (int i = 0; i < numbers.length; i++) {
-             if (numbers[i] % 2 == 0 || numbers[i] % 2 != 0 ) {
-                 count2++;
-             }
-         }
-         double Average = sum1 / count2;
+
+         double Average = (double ) sum1 / numbers.length;
         System.out.println("Average: " + Average);
     }
+
+
 }
