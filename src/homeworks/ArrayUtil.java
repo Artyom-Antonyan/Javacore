@@ -80,15 +80,9 @@ public class ArrayUtil {
 
         //        Խնդիր 10 — Հաշվել միջին թվաբանականը
 
-         int sum1 = 0;
-         int count2 = 0;
-
-         for (int i = 0; i < numbers.length; i++) {
-            sum1 =  sum1 + numbers[i];
-        }
 
 
-         double Average = (double ) sum1 / numbers.length;
+         double Average = (double ) sum / numbers.length;
         System.out.println("Average: " + Average);
     }
 
