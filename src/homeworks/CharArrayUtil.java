@@ -145,7 +145,6 @@ public class CharArrayUtil {
            }
         }
         System.out.println(palindrome);
-
     }
 }
 
