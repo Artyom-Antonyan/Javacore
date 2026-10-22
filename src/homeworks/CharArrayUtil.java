@@ -134,14 +134,10 @@ public class CharArrayUtil {
 
         //     Խնդիր 10 — Ստուգել Palindrome-ը
 
-        char[] chars2 = {
-                'J', 'a', 'v', 'a', ' ',
-                'i', 's', ' ', 'f', 'u', 'n', '!'
-        };
 
         boolean palindrome =  true;
-        for (int i = 0; i < chars2.length / 2; i++) {
-           if(chars2[i] != chars2[chars2.length - 1 - i]){
+        for (int i = 0; i < chars.length / 2; i++) {
+           if(chars[i] != chars[chars.length - 1 - i]){
                palindrome = false;
                break;
            }
