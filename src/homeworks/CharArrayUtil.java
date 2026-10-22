@@ -71,46 +71,48 @@ public class CharArrayUtil {
 
         //   Խնդիր 7 — Շրջել սիմվոլների հերթականությունը (Reverse)
 
+        char[] charsReverse = {
+                'J', 'a', 'v', 'a', ' ',
+                'i', 's', ' ', 'f', 'u', 'n', '!'
+        };
 
-        for (int i = 0; i < chars.length / 2; i++) {
 
-            char temp = chars[i];
-            chars[i] = chars[chars.length - 1 - i];
-            chars[chars.length - 1 - i] = temp;
+        for (int i = 0; i < charsReverse.length / 2; i++) {
+
+            char temp = charsReverse[i];
+            charsReverse[i] = charsReverse[charsReverse.length - 1 - i];
+            charsReverse[charsReverse.length - 1 - i] = temp;
         }
-        for (int i = 0; i < chars.length; i++) {
-            System.out.print(chars[i]);
+        for (int i = 0; i < charsReverse.length; i++) {
+            System.out.print(charsReverse[i]);
         }
 
         System.out.println();
 
         //     Խնդիր 8 — Փոխել մեծատառերը և փոքրատառերը
 
-        char[] chars1 = {
-                'J', 'a', 'v', 'a', ' ',
-                'i', 's', ' ', 'f', 'u', 'n', '!'
-        };
 
-        for (int i = 0; i < chars1.length; i++) {
 
-            if (chars1[i] >= 'a' && chars1[i] <= 'z') {
-                chars1[i] = (char) (chars1[i] - 32);
+        for (int i = 0; i < chars.length; i++) {
+
+            if (chars[i] >= 'a' && chars[i] <= 'z') {
+                chars[i] = (char) (chars[i] - 32);
             }
 
 
         }
-        for (int i = 0; i < chars1.length; i++) {
-            System.out.print(chars1[i]);
+        for (int i = 0; i < chars.length; i++) {
+            System.out.print(chars[i]);
         }
         System.out.println();
 
-        for (int i = 0; i < chars1.length; i++) {
-            if (chars1[i] >= 'A' && chars1[i] <= 'Z') {
-                chars1[i] = (char) (chars1[i] + 32);
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] >= 'A' && chars[i] <= 'Z') {
+                chars[i] = (char) (chars[i] + 32);
             }
         }
-        for (int i = 0; i < chars1.length; i++) {
-            System.out.print(chars1[i]);
+        for (int i = 0; i < chars.length; i++) {
+            System.out.print(chars[i]);
         }
         System.out.println();
 
@@ -119,13 +121,13 @@ public class CharArrayUtil {
         char oldChar = 'a';
         char newChar = '*';
 
-        for (int i = 0; i < chars1.length; i++) {
-            if (chars1[i] == oldChar) {
-                chars1[i] = newChar;
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == oldChar) {
+                chars[i] = newChar;
             }
         }
-        for (int i = 0; i < chars1.length; i++) {
-            System.out.print(chars1[i]);
+        for (int i = 0; i < chars.length; i++) {
+            System.out.print(chars[i]);
         }
 
         System.out.println();
