@@ -100,7 +100,5 @@ public class DynamicArrayDemo {
         System.out.println(daTest4.getByIndex(-1));
         System.out.println(daTest4.getByIndex(5));
     }
-
-
 }
 
