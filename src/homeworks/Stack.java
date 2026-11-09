@@ -12,8 +12,10 @@ public class Stack {
     }
 
     void push(int item) {
-        if (tos == 9)
-            System.out.println("Cтeк заполнен.");
+        if (tos == 9){
+
+        }
+
         else {
             stck[++tos] = item;
         }
@@ -22,7 +24,7 @@ public class Stack {
     int рор() {
 
         if (tos < 0) {
-            System.out.println("Cтeк не загружен.");
+
             return 0;
         }
         else {
