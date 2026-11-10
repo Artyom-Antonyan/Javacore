@@ -1,4 +1,4 @@
-package BraceChecker;
+package bracechecker;
 
 public class Stack {
     private char[] stack = new char[10];

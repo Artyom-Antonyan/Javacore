@@ -1,4 +1,4 @@
-package BraceChecker;
+package bracechecker;
 
 public class BraceChecker {
 
@@ -58,20 +58,4 @@ public class BraceChecker {
         System.out.println("No errors");
     }
 
-    private boolean a (char opened, char closed) {
-
-        if (opened == '(' && closed == ')') {
-            return true;
-        }
-
-        if (opened == '[' && closed == ']') {
-            return true;
-        }
-
-        if (opened == '{' && closed == '}') {
-            return true;
-        }
-
-        return false;
-    }
 }
