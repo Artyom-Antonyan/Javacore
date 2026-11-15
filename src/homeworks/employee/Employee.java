@@ -1,24 +1,22 @@
 package homeworks.employee;
 
-public class Employe {
+import java.util.Objects;
+
+public class Employee {
     private String name;
     private String surname;
     private String employeeID;
-    private String salary;
+    private double salary;
     private String company;
     private String position;
 
-    public Employe(String name, String surname, String employeeID, String salary, String company, String position) {
+    public Employee(String name, String surname, String employeeID, double salary, String company, String position) {
         this.name = name;
         this.surname = surname;
         this.employeeID = employeeID;
         this.salary = salary;
         this.company = company;
         this.position = position;
-    }
-
-    public Employe() {
-
     }
 
 
@@ -46,11 +44,11 @@ public class Employe {
         this.employeeID = employeeID;
     }
 
-    public String getSalary() {
-        return salary;
+    public double getSalary() {
+        return 0;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
@@ -79,5 +77,17 @@ public class Employe {
                 "\nSalary: " + salary +
                 "\nCompany: " + company +
                 "\nPosition: " + position;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return Objects.equals(employeeID, employee.employeeID);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(employeeID);
     }
 }

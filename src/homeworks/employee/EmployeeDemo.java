@@ -40,7 +40,7 @@ public class EmployeeDemo {
                      searchEmployeeById();
                     break;
                 case SEARCH_EMPLOYEES_BY_COMPANY_NAME:
-                   setSearchEmployeesByCompanyName();
+                   SearchEmployeesByCompanyName();
                     break;
                 default:
                     System.out.println("Invalid command. Please try again.");
@@ -68,7 +68,7 @@ public class EmployeeDemo {
         String id = scanner.nextLine();
 
         System.out.println("Please input employee salary:");
-        String salary = scanner.nextLine();
+        double salary = Double.parseDouble(scanner.nextLine());
 
         System.out.println("Please input employee company:");
         String company = scanner.nextLine();
@@ -76,7 +76,7 @@ public class EmployeeDemo {
         System.out.println("Please input employee position:");
         String position = scanner.nextLine();
 
-        Employe employee = new Employe(
+        Employee employee = new Employee(
                 name, surname, id, salary, company, position
         );
 
@@ -91,11 +91,11 @@ public class EmployeeDemo {
 
         employeeStorage.searchEmployeeById(employeeId);
     }
-    private static void setSearchEmployeesByCompanyName() {
+    private static void SearchEmployeesByCompanyName() {
         System.out.println("Please input company name: ");
         String company = scanner.nextLine();
 
-        employeeStorage.setSearchEmployeesByCompanyName(company);
+        employeeStorage.SearchEmployeesByCompanyName(company);
     }
 
 

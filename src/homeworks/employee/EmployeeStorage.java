@@ -3,10 +3,10 @@ package homeworks.employee;
 
 public class EmployeeStorage {
 
-    private Employe[] array = new Employe[10];
+    private Employee[] array = new Employee[10];
     private int size = 0;
 
-    public void add(Employe s) {
+    public void add(Employee s) {
         if (size == array.length) {
             extend();
         }
@@ -14,19 +14,14 @@ public class EmployeeStorage {
     }
 
     private void extend() {
-        Employe[] tmp = new Employe[array.length + 10];
+        Employee[] tmp = new Employee[array.length + 10];
         for (int i = 0; i < array.length; i++) {
             tmp[i] = array[i];
         }
         array = tmp;
     }
 
-    public Employe getByIndex(int index) {
-        if (index >= 0 && index < size) {
-            return array[index];
-        }
-        return null;
-    }
+
 
     public void print() {
         if (size == 0) {
@@ -41,18 +36,6 @@ public class EmployeeStorage {
         }
     }
 
-    public void search(String keyword) {
-        for (int i = 0; i < size; i++) {
-            if (array[i].getName().contains(keyword)
-                    || array[i].getSurname().contains(keyword)
-                    || array[i].getEmployeeID().contains(keyword)
-                    || array[i].getSalary().contains(keyword)
-                    || array[i].getCompany().contains(keyword)
-                    || array[i].getPosition().contains(keyword)) {
-                System.out.println(array[i] + " ");
-            }
-        }
-    }
 
     public void searchEmployeeById(String employeeID) {
 
@@ -70,12 +53,13 @@ public class EmployeeStorage {
 
     }
 
-    public void setSearchEmployeesByCompanyName(String company) {
+    public void SearchEmployeesByCompanyName(String company) {
         boolean found = false;
+        System.out.println("Employees: ");
 
         for (int i = 0; i < size; i++) {
             if (array[i].getCompany().equals(company)) {
-                System.out.println("Employees: ");
+
                 System.out.println(array[i] + " ");
                 found = true;
             }
