@@ -40,7 +40,7 @@ public class EmployeeDemo {
                      searchEmployeeById();
                     break;
                 case SEARCH_EMPLOYEES_BY_COMPANY_NAME:
-                   SearchEmployeesByCompanyName();
+                   searchEmployeesByCompanyName();
                     break;
                 default:
                     System.out.println("Invalid command. Please try again.");
@@ -91,11 +91,11 @@ public class EmployeeDemo {
 
         employeeStorage.searchEmployeeById(employeeId);
     }
-    private static void SearchEmployeesByCompanyName() {
+    private static void searchEmployeesByCompanyName() {
         System.out.println("Please input company name: ");
         String company = scanner.nextLine();
 
-        employeeStorage.SearchEmployeesByCompanyName(company);
+        employeeStorage.searchEmployeesByCompanyName(company);
     }
 
 

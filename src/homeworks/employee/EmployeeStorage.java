@@ -53,7 +53,7 @@ public class EmployeeStorage {
 
     }
 
-    public void SearchEmployeesByCompanyName(String company) {
+    public void searchEmployeesByCompanyName(String company) {
         boolean found = false;
         System.out.println("Employees: ");
 
