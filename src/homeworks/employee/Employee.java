@@ -1,16 +1,22 @@
+
 package homeworks.employee;
 
 import java.util.Objects;
 
 public class Employee {
+
     private String name;
     private String surname;
     private String employeeID;
     private double salary;
-    private String company;
+    private Company company;
     private String position;
 
-    public Employee(String name, String surname, String employeeID, double salary, String company, String position) {
+    public Employee() {
+    }
+
+    public Employee(String name, String surname, String employeeID,
+                    double salary, Company company, String position) {
         this.name = name;
         this.surname = surname;
         this.employeeID = employeeID;
@@ -18,7 +24,6 @@ public class Employee {
         this.company = company;
         this.position = position;
     }
-
 
     public String getName() {
         return name;
@@ -52,11 +57,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String getCompany() {
+    public Company getCompany() {
         return company;
     }
 
-    public void setCompany(String company) {
+    public void setCompany(Company company) {
         this.company = company;
     }
 
@@ -68,26 +73,26 @@ public class Employee {
         this.position = position;
     }
 
-
     @Override
     public String toString() {
-        return "Name: " + name +
+        return "Employee ID: " + employeeID +
+                "\nName: " + name +
                 "\nSurname: " + surname +
-                "\nEmployee ID: " + employeeID +
                 "\nSalary: " + salary +
-                "\nCompany: " + company +
-                "\nPosition: " + position;
+                "\nPosition: " + position +
+                "\nCompany: " + company.getName();
     }
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) return true;
+        if (!(o instanceof Employee)) return false;
         Employee employee = (Employee) o;
         return Objects.equals(employeeID, employee.employeeID);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(employeeID);
+        return Objects.hash(employeeID);
     }
 }

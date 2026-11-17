@@ -1,4 +1,4 @@
-package studentportal;
+package homeworks.studentportal;
 
 public class StudentStorage {
     private Student[] array = new Student[10];

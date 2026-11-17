@@ -1,4 +1,4 @@
-package studentportal;
+package homeworks.studentportal;
 
 import java.util.Scanner;
 

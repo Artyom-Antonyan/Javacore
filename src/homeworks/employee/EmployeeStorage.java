@@ -15,6 +15,7 @@ public class EmployeeStorage {
             return;
         }
 
+
         if (size == employees.length) {
             employees = Arrays.copyOf(employees, employees.length + 10);
         }
@@ -28,6 +29,7 @@ public class EmployeeStorage {
             System.out.println("----------------");
         }
     }
+
 
     public Employee getById(String id) {
         for (int i = 0; i < size; i++) {
@@ -67,4 +69,6 @@ public class EmployeeStorage {
             System.out.println("Employees not found!");
         }
     }
+
+
 }

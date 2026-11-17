@@ -1,4 +1,4 @@
-package studentportal;
+package homeworks.studentportal;
 
 public class Student {
     private String name;
