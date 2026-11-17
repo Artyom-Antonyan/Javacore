@@ -1,4 +1,3 @@
-
 package homeworks.employee;
 
 import java.util.Arrays;
@@ -14,7 +13,6 @@ public class EmployeeStorage {
             System.out.println("Employee already exists!");
             return;
         }
-
 
         if (size == employees.length) {
             employees = Arrays.copyOf(employees, employees.length + 10);
